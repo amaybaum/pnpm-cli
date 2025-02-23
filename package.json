@@ -26,6 +26,7 @@
     "//": "a9 insecure components"
   },
   "scripts": {
+    "preinstall": "npx only-allow pnpm",
     "start": "node server.js",
     "dev": "cross-env PORT=5000 nodemon",
     "test:e2e": "cross-env NODE_ENV=test cypress open",
