@@ -9,8 +9,8 @@ jobs:
     steps:
     - uses: actions/checkout@v3
       
-      -name build with pnpm
-      run: pnp install
+      -name: build with pnpm
+        run: pnp install
 
     - name: Mend CLI Scan
       env:
