@@ -8,6 +8,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+      
+      -name build with pnpm
+      run: pnp install
+
     - name: Mend CLI Scan
       env:
         MEND_EMAIL: ${{secrets.MEND_SANDBOX_EMAIL}}
