@@ -1,4 +1,4 @@
-name: Mend dep reacahbility Scan (unified CLI)
+name: CLI Reachability Linux
 
 on: workflow_dispatch
 
