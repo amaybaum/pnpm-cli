@@ -20,7 +20,8 @@ jobs:
         MEND_EMAIL: ${{secrets.MEND_SAAS_EMAIL}}
         MEND_USER_KEY: ${{secrets.MEND_SAAS_USER_KEY}}
         MEND_URL: https://saas.whitesourcesoftware.com
-        MEND_DEBUG_SHOW_VERSION: "true"
+        MEND_DEBUG_SHOW_VERSION: true
+        MEND_LOG_LEVEL: debug
       run: |
         echo Downloading Mend CLI
         mkdir C:\mend\cli && curl https://downloads.mend.io/cli/windows_amd64/mend.exe -o C:\mend\cli\mend.exe
