@@ -26,4 +26,4 @@ jobs:
         echo run Mend dependencies scan
         pwd
         dir
-        C:\mend\cli\mend.exe dep -r --print-to-console
+        C:\mend\cli\mend.exe dep -u -r --print-to-console
