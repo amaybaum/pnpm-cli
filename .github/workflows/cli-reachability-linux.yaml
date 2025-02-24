@@ -26,4 +26,4 @@ jobs:
         echo run Mend dependencies scan
         pwd
         ls -la
-        mend dep -r --print-to-console
+        mend dep -u -r --print-to-console
