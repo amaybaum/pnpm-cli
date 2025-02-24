@@ -10,7 +10,7 @@ jobs:
     - uses: actions/checkout@v3
       
       -name: build with pnpm
-        run: pnp install
+        run: pnpm install
 
     - name: Mend CLI Scan
       env:
