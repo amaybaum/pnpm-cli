@@ -26,4 +26,4 @@ jobs:
         echo run Mend dependencies scan
         pwd
         ls -la
-        mend dep -u -r -s "pnpm_tests//unified_CLI_reachability"
+        mend dep -r --print-to-console
