@@ -25,5 +25,5 @@ jobs:
         curl https://downloads.mend.io/cli/linux_amd64/mend -o /usr/local/bin/mend && chmod +x /usr/local/bin/mend
         echo run Mend dependencies scan
         pwd
-        ll
+        ls -la
         mend dep -u -r -s "pnpm_tests//unified_CLI_reachability"
