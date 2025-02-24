@@ -1,4 +1,4 @@
-name: Mend dep Scan (unified CLI)
+name: Mend dep reacahbility Scan (unified CLI)
 
 on: workflow_dispatch
 
