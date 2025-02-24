@@ -4,7 +4,7 @@ on: workflow_dispatch
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
     - uses: actions/checkout@v3
@@ -17,11 +17,11 @@ jobs:
 
     - name: Mend CLI Scan
       env:
-        MEND_EMAIL: ${{secrets.MEND_SANDBOX_EMAIL}}
-        MEND_USER_KEY: ${{secrets.MEND_SANDBOX_USER_KEY}}
-        MEND_URL: https://saas.mend.io
+        MEND_EMAIL: ${{secrets.MEND_SAAS_EMAIL}}
+        MEND_USER_KEY: ${{secrets.MEND_SAAS_USER_KEY}}
+        MEND_URL: https://saas.whitesourcesoftware.com
       run: |
         echo Downloading Mend CLI
-        curl https://downloads.mend.io/cli/linux_amd64/mend -o /usr/local/bin/mend && chmod +x /usr/local/bin/mend
+        mkdir C:\mend\cli && curl https://downloads.mend.io/cli/windows_amd64/mend.exe -o C:\mend\cli\mend.exe
         echo run Mend dependencies scan
         mend dep -u -r -s "pnpm_tests//unified_CLI_reachability"
