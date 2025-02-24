@@ -22,9 +22,7 @@ jobs:
         MEND_URL: https://saas.mend.io
         WS_ENABLEIMPACTANALYSIS: TRUE
       run: |
-        echo Mend email: $MEND_EMAIL
-        echo Mend userkey: $MEND_USER_KEY
         echo Downloading Mend CLI
         curl https://downloads.mend.io/cli/linux_amd64/mend -o /usr/local/bin/mend && chmod +x /usr/local/bin/mend
         echo run Mend dependencies scan
-        mend ua -app-path package.json -product pnpm_tests -project nified_UA_reachability
+        mend ua -appPath package.json -product pnpm_tests -project nified_UA_reachability
