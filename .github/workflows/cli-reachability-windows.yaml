@@ -26,4 +26,4 @@ jobs:
         echo run Mend dependencies scan
         pwd
         dir
-        C:\mend\cli\mend.exe dep -u -r -s "pnpm_tests//unified_CLI_reachability"
+        C:\mend\cli\mend.exe dep -r --print-to-console
