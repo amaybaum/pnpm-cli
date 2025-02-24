@@ -25,4 +25,4 @@ jobs:
         echo Downloading Mend CLI
         curl https://downloads.mend.io/cli/linux_amd64/mend -o /usr/local/bin/mend && chmod +x /usr/local/bin/mend
         echo run Mend dependencies scan
-        mend ua -appPath package.json -product pnpm_tests -project nified_UA_reachability
+        mend ua -appPath package.json -product pnpm_tests -project unified_UA_reachability
