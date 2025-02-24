@@ -1,4 +1,4 @@
-name: Mend dep reacahbility Scan (unified CLI)
+name: Mend dep reachability Scan (unified CLI)
 
 on: workflow_dispatch
 
@@ -24,4 +24,4 @@ jobs:
         echo Downloading Mend CLI
         mkdir C:\mend\cli && curl https://downloads.mend.io/cli/windows_amd64/mend.exe -o C:\mend\cli\mend.exe
         echo run Mend dependencies scan
-        mend dep -u -r -s "pnpm_tests//unified_CLI_reachability"
+        C:\mend\cli\mend.exe dep -u -r -s "pnpm_tests//unified_CLI_reachability"
