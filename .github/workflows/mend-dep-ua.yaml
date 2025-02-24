@@ -17,13 +17,14 @@ jobs:
 
     - name: Mend CLI Scan
       env:
-        MEND_EMAIL: ${{secrets.MEND_SANDBOX_EMAIL}}
-        MEND_USER_KEY: ${{secrets.MEND_SANDBOX_USER_KEY}}
+        MEND_EMAIL: ${{secrets.MEND_DEMO_EMAIL}}
+        MEND_USER_KEY: ${{secrets.MEND_DEMO_USER_KEY}}
         MEND_URL: https://saas.mend.io
+        WS_ENABLEIMPACTANALYSIS: TRUE
       run: |
         echo Mend email: $MEND_EMAIL
         echo Mend userkey: $MEND_USER_KEY
         echo Downloading Mend CLI
         curl https://downloads.mend.io/cli/linux_amd64/mend -o /usr/local/bin/mend && chmod +x /usr/local/bin/mend
         echo run Mend dependencies scan
-        mend dep -u -s "pnpm_tests//unified_CLI"
+        mend ua  -r -s -product pnpm_tests -project nified_UA_reachability"
