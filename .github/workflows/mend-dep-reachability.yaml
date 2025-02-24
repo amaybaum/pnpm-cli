@@ -24,4 +24,6 @@ jobs:
         echo Downloading Mend CLI
         mkdir C:\mend\cli && curl https://downloads.mend.io/cli/windows_amd64/mend.exe -o C:\mend\cli\mend.exe
         echo run Mend dependencies scan
+        pwd
+        dir
         C:\mend\cli\mend.exe dep -u -r -s "pnpm_tests//unified_CLI_reachability"
